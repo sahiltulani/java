@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        .exercise {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .exercise h2 {
+            color: #007bff;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .output {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+ <h1>Applet question</h1>
+
+    <div class="exercise">
+        <h2>Create an Applet showing the string "Hello World" which is embedded in the HTML page</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class HelloWorldApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawString("Hello World", 20, 20);
+    }
+}
+        </code></pre>
+        <p class="output">Output: Displays "Hello World" on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet showing the string "Hello World" which is executed by an appletviewer</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class HelloWorldViewerApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawString("Hello World", 20, 20);
+    }
+}
+
+// To execute by appletviewer, use:
+// appletviewer HelloWorldViewerApplet.java
+        </code></pre>
+        <p class="output">Output: Displays "Hello World" when run with appletviewer.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw a circle</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawCircleApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawOval(50, 50, 100, 100);  // Draw circle (oval with equal width and height)
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws a circle on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw a polygon</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawPolygonApplet extends Applet {
+    public void paint(Graphics g) {
+        int[] xPoints = {50, 100, 150, 200, 250};
+        int[] yPoints = {50, 100, 50, 100, 50};
+        g.drawPolygon(xPoints, yPoints, 5);  // Draw polygon with 5 points
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws a polygon on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw a rectangle</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawRectangleApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawRect(50, 50, 200, 100);  // Draw rectangle
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws a rectangle on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw a square</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawSquareApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawRect(50, 50, 100, 100);  // Draw square
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws a square on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw 4 concentric circles</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class ConcentricCirclesApplet extends Applet {
+    public void paint(Graphics g) {
+        for (int i = 0; i < 4; i++) {
+            g.drawOval(50 + i * 20, 50 + i * 20, 100 - i * 40, 100 - i * 40);
+        }
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws 4 concentric circles on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw a line</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawLineApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawLine(50, 50, 200, 200);  // Draw line from (50, 50) to (200, 200)
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws a line on the applet from (50, 50) to (200, 200).</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw an oval</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawOvalApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawOval(50, 50, 200, 100);  // Draw oval
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws an oval on the applet.</p>
+    </div>
+
+    <div class="exercise">
+        <h2>Create an Applet in Java to draw an arc</h2>
+        <pre><code>
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawArcApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawArc(50, 50, 200, 100, 0, 180);  // Draw arc from 0 to 180 degrees
+    }
+}
+        </code></pre>
+        <p class="output">Output: Draws an arc on the applet from 0 to 180 degrees.</p>
+    </div>
+
+
+</body>
+</html>
